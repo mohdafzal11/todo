@@ -6,6 +6,7 @@ const todoSchema = new Schema({
     title: { type: String, required: true },
     description: { type: String },
     deadline: { type: Date },
+    reminder: { type: Date } ,
     completed: { type: Boolean, default: false },
 });
 

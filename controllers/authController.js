@@ -6,7 +6,6 @@ import jwt from 'jsonwebtoken';
 const signToken = id => jwt.sign({ id }, process.env.JWT_SECRET, { expiresIn: '1d' });
 
 export const signup = async (req, res) => {
-    console.log(req.body)
     try {
         const {username ,  email, password } = req.body;
         const newUser = await User.create({ username ,  email, password });
